@@ -1,0 +1,267 @@
+.tripInformation {
+  margin-top: 20px;
+  color: #1e90ff;
+  font-size: 16px;
+}
+
+.trip-weather {
+  font-size: 18px;
+  color: #4682b4;
+}
+
+.addTrip {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.addTrip .addTripElement {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.addTrip .addTrip-button {
+  padding: 18px 36px;
+  margin-right: 28px;
+  background-color: #1e90ff;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 12px;
+  color: #fff;
+  border: none;
+  width: 200px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.list .listItem {
+  background-color: #b0c4de;
+  border-radius: 16px;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  width: auto;
+  align-items: center;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.listItem {
+  background-color: #add8e6;
+  border-radius: 14px;
+  display: flex;
+  flex: 0 0 auto;
+  width: auto;
+  align-items: center;
+  margin: 0 6px;
+  padding: 0 6px;
+  margin-top: 5px;
+}
+
+.listItem p {
+  display: flex;
+  align-items: center;
+}
+
+.listItem p span {
+  background-color: white;
+  padding: 0 5px;
+  margin: 0 3px 0 10px;
+  border-radius: 50%;
+}
+
+#addItem {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .addTrip {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addTrip .addTripElement {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addTrip .addTrip-button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list .listItem {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .tripCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tripImage {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-right: 0;
+    height: auto;
+  }
+
+  .tripDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .tripButtons button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .travelPlanner {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .tripCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tripImage {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    width: 100%;
+    margin-right: 0;
+    height: auto;
+  }
+
+  .tripDetails {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .tripButtons button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #e6f0fa center/cover no-repeat fixed; /* LightBlue background */
+}
+
+.travelPlanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(173, 216, 230, 0.8); /* LightBlue with opacity */
+  box-shadow: 0 2px 10px rgba(32, 19, 19, 0.1);
+  overflow: hidden;
+  width: 630px;
+  margin-top: 35px;
+}
+
+#addTripForm {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.saveTrip {
+  background-color: #4682b4; /* SteelBlue */
+}
+
+.removeTrip {
+  background-color: #b0c4de; /* LightSteelBlue */
+  color: #721c69;
+}
+
+h1 {
+  font-size: 24px;
+  padding: 24px;
+  text-align: center;
+  margin: 0;
+  border-bottom: 1px solid #fefcfc69;
+}
+
+.tripCard {
+  background-color: #f0f8ff; /* AliceBlue */
+  padding: 24px;
+  border-bottom: 1px solid #c2bdbd;
+}
+
+.tripImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin-right: 32px;
+  border-radius: 8px;
+}
+
+.tripDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.tripErrors {
+  color: red;
+  font-size: 18px;
+}
+
+.tripDetails p {
+  margin: 8px 0;
+  font-size: 18px;
+  color: #335;
+}
+
+.tripButtons {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.tripButtons button {
+  border: none;
+  margin-right: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 16px 18px;
+}

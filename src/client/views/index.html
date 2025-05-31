@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Planner</title>
+  </head>
+  <body>
+    <div class="travelPlanner">
+      <h1>Travel Planner</h1>
+      <div id="travelContainer">
+      </div>
+
+      <form id="addTripForm">
+        <div class="addTripElement">
+          <label for="tripCity">Add Trip</label>
+          <input
+            type="text"
+            id="tripCity"
+            name="tripCity"
+            placeholder="Please Enter here trip city"
+          />
+          <p id="location"></p>
+        </div>
+        <div class="addTripElement">
+          <label for="tripDate">Add Start Date</label>
+          <input type="date" id="tripDate" name="tripDate" required />
+        </div>
+        <div class="addTripElement">
+          <label for="endDate">Add End Date</label>
+          <input type="date" id="endDate" name="endDate" required />
+        </div>
+        <button class="addTrip" id="addTrip">add</button>
+      </form>
+      <div id="tripErrors">
+
+      </div>
+      </div>
+    </div>
+    <script type="module" src="./../js/app.js" defer></script>
+    <script type="module" src="./../js/utils/calculateDaysDifference.js"></script>
+    <script>
+     
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .then(registration => {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+              console.error('Service Worker registration failed:', error);
+            });
+        });
+      }
+      
+    </script>
+  </body>
+</html>
